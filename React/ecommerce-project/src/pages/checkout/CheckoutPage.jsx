@@ -4,7 +4,7 @@ import './CheckoutPage.css';
 import './checkout-header.css';
 import { OrderSummary } from './OrderSummary';
 import { PaymentSummary } from './PaymentSummary';
-import { ChecoutHeader } from './CheckoutHeader';
+import { CheckoutHeader } from './CheckoutHeader';
 
 export function CheckoutPage({ cart,loadCart }) {
 
@@ -30,7 +30,7 @@ export function CheckoutPage({ cart,loadCart }) {
 
       <title>Checkout</title>
 
-      <ChecoutHeader />
+      <CheckoutHeader paymentSummary={paymentSummary}/>
 
       <div className="checkout-page">
         <div className="page-title">Review your order</div>
