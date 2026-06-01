@@ -13,7 +13,8 @@ export function OrderSummary({ deliveryOptions, cart }) {
           })
 
 
-        return (<div key={cartItem.productId} className="cart-item-container">
+        return (
+        <div key={cartItem.productId} className="cart-item-container">
           <div className="delivery-date">
             Delivery date: {dayjs(selectedDeliveryOption.
               estimatedDeliveryTimeMs).format('dddd, MMMM D')}
@@ -28,7 +29,7 @@ export function OrderSummary({ deliveryOptions, cart }) {
                 {cartItem.product.name}
               </div>
               <div className="product-price">
-                ${formatMoney(cartItem.priceCents)}
+                ${formatMoney(cartItem.product.priceCents)}
               </div>
               <div className="product-quantity">
                 <span>
